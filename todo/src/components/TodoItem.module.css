@@ -1,0 +1,53 @@
+.todoItem {
+  display: flex;
+  align-items: center;  
+  justify-content: center;
+  margin-bottom: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  background-color: #fdfdfd;
+  border-radius: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+
+}
+
+.statusIcon {
+  font-size: 1.4rem; 
+  cursor: pointer;
+  transition: transform 0.2s;
+  margin-right: 0.5rem;
+  color: #3a3a3a;
+}
+
+
+.todoText {
+  font-size: 1rem;
+  color: #3a3a3a;
+  transition: text-decoration 0.3s;
+  flex-grow: 1; 
+}
+
+.completedText {
+  text-decoration: line-through;
+  color: #3a3a3a;
+}
+
+button {
+  all: unset; 
+  cursor: pointer;
+}
+
+
+.deleteButton {
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+  color: #fa75b8;
+}
+
+.completedIcon {
+  color: #88f8cd;
+}
+
+
