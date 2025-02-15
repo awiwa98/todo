@@ -4,6 +4,7 @@ import styles from "./TodoForm.module.css";
 const TodoForm = ({ onAddTodo }) => {
   const [inputText, setInputText] = useState("");
   const [error, setError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState(""); 
   const maxLength = 30;
 
   const handleSubmit = (e) => {
@@ -11,10 +12,12 @@ const TodoForm = ({ onAddTodo }) => {
 
     if (inputText.trim() === "") {
       setError(true);
+      setErrorMessage("Please enter a task!"); 
     } else {
       onAddTodo(inputText);
       setInputText("");
       setError(false);
+      setErrorMessage(""); 
     }
   };
 
@@ -29,11 +32,12 @@ const TodoForm = ({ onAddTodo }) => {
             if (e.target.value.length <= maxLength) {
               setInputText(e.target.value);
               setError(false);
+              setErrorMessage(""); 
             }
           }}
-          placeholder="Add a new task..."
-          maxLength={maxLength}/>
-          
+          placeholder={error ? errorMessage : "Add a new task..."} 
+          maxLength={maxLength}
+        />
         <button type="submit" className={styles.button}>
           <i className="fa-solid fa-circle-plus"></i>
         </button>
@@ -43,6 +47,7 @@ const TodoForm = ({ onAddTodo }) => {
 };
 
 export default TodoForm;
+
 
 
 

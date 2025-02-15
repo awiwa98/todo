@@ -24,6 +24,15 @@
   }
 }
 
+@media (min-width: 768px) { 
+
+  .title {
+    font-size: 1.7rem;
+  }
+ }
+
+
+
 
 
 
